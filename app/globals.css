@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-black: #0B0B0C;
+  --color-brand-gray: #737373;
+  --color-brand-sand: #C2B280;
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+@layer base {
+  body {
+    @apply bg-white text-brand-black font-sans antialiased selection:bg-brand-sand selection:text-white;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal;
+  }
+}

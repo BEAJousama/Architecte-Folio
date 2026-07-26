@@ -1,0 +1,6 @@
+{
+  "name": "LK Archi Groupe",
+  "description": "Portfolio haut de gamme pour LK Archi Groupe, studio d'architecture marocain.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
