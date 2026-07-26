@@ -5,7 +5,7 @@ import { PortableText } from 'next-sanity';
 export const revalidate = 60;
 
 export default async function MentionsLegalesPage() {
-  const data = await sanityFetch(pageQuery, { slug: "mentions-legales" }, null);
+  const data = await sanityFetch<any>(pageQuery, { slug: "mentions-legales" }, null);
   
   if (!data) {
     // Fallback static version if Sanity has no data for this page yet

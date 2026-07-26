@@ -10,10 +10,10 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   const { id } = await params;
   
   // Fetch specific project
-  const project = await sanityFetch(singleProjectQuery, { slug: id }, null);
+  const project = await sanityFetch<any>(singleProjectQuery, { slug: id }, null);
   
   // Fetch all projects to determine "Next Project"
-  const allProjects = await sanityFetch(projectsQuery, {}, []);
+  const allProjects = await sanityFetch<any[]>(projectsQuery, {}, []);
   
   if (!project) {
     return <div className="min-h-screen pt-48 px-8 max-w-screen-2xl mx-auto">Projet introuvable</div>;

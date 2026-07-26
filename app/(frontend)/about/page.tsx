@@ -5,6 +5,6 @@ import { aboutPageQuery } from '@/sanity/lib/queries';
 export const revalidate = 60;
 
 export default async function AboutPage() {
-  const data = await sanityFetch(aboutPageQuery, {}, {});
+  const data = await sanityFetch<any>(aboutPageQuery, {}, {});
   return <AboutClient data={data} />;
 }

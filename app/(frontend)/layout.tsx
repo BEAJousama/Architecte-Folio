@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 import { SmoothScroll } from '@/components/smooth-scroll';
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const settings = await sanityFetch(globalSettingsQuery, {}, {});
+  const settings = await sanityFetch<any>(globalSettingsQuery, {}, {});
   return (
     <html lang="fr" className={`${inter.variable} ${cormorantGaramond.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-brand-black text-brand-black font-sans" suppressHydrationWarning>
