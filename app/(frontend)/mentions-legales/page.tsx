@@ -24,8 +24,8 @@ export default async function MentionsLegalesPage() {
               <h2 className="text-sm uppercase tracking-[0.2em] font-medium mb-4 border-b border-brand-black/10 pb-2">1. Éditeur du Site</h2>
               <p className="mb-2">Le site <strong>LK Archi Groupe</strong> est édité par la société LK Archi.</p>
               <p>Forme juridique : SARL<br/>
-                 Siège social : 24 Blvd d&apos;Anfa, Quartier Racine, Casablanca, Maroc<br/>
-                 Email : contact@lkarchigroupe.com</p>
+                 Siège social : Salé, Maroc<br/>
+                 Email : lkarchigroupe@gmail.com</p>
             </section>
           </div>
         </div>

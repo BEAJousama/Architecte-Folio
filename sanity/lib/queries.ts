@@ -15,6 +15,7 @@ export const globalSettingsQuery = groq`*[_type == "globalSettings"][0]{
     email,
     phone,
     instagram,
+    facebook,
     linkedin
   },
   seo {
@@ -121,6 +122,7 @@ export const contactPageQuery = groq`*[_type == "contactPage"][0]{
     email,
     phone,
     instagram,
+    facebook,
     linkedin
   },
   seo {

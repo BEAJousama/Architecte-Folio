@@ -1,5 +1,5 @@
 'use client';
-import { ArrowRight, Instagram, Mail, MapPin } from 'lucide-react';
+import { ArrowRight, Instagram, Mail, MapPin, Facebook, Linkedin } from 'lucide-react';
 
 export function ContactClient({ data, globalSettings }: { data: any, globalSettings: any }) {
   // Use specific contact info if override is enabled, else fallback to global
@@ -9,10 +9,12 @@ export function ContactClient({ data, globalSettings }: { data: any, globalSetti
 
   const heading = data?.heading || "PARLONS";
   const subheading = data?.subheading || "PROJET.";
-  const address = contactInfo.address || "24 Blvd d'Anfa, Quartier Racine, Casablanca, Maroc";
-  const email = contactInfo.email || "contact@lkarchigroupe.com";
-  const instagram = contactInfo.instagram || "https://instagram.com";
-  const coordinates = contactInfo.mapCoordinates || "33°35'36\"N 7°39'38\"W";
+  const address = contactInfo?.address || "L&K Architecture est une agence d'architecture, d'urbanisme et de design basée à Salé.";
+  const email = contactInfo?.email || "lkarchigroupe@gmail.com";
+  const instagram = contactInfo?.instagram || "https://instagram.com/lkarchigroupe";
+  const facebook = contactInfo?.facebook || "https://www.facebook.com/lkarchigroupe";
+  const linkedin = contactInfo?.linkedin || "https://linkedin.com/lkarchigroupe";
+  const coordinates = contactInfo?.mapCoordinates || "34.075416, -6.7879382";
 
   return (
     <div className="bg-transparent min-h-screen pt-32 pb-12 flex flex-col">
@@ -47,6 +49,16 @@ export function ContactClient({ data, globalSettings }: { data: any, globalSetti
                  <li>
                    <a href={instagram} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-brand-sand transition-colors">
                      <Instagram className="w-3.5 h-3.5 shrink-0" /> Instagram
+                   </a>
+                 </li>
+                 <li>
+                   <a href={facebook} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-brand-sand transition-colors">
+                     <Facebook className="w-3.5 h-3.5 shrink-0" /> Facebook
+                   </a>
+                 </li>
+                 <li>
+                   <a href={linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 hover:text-brand-sand transition-colors">
+                     <Linkedin className="w-3.5 h-3.5 shrink-0" /> LinkedIn
                    </a>
                  </li>
                </ul>
@@ -106,7 +118,7 @@ export function ContactClient({ data, globalSettings }: { data: any, globalSetti
         <div className="lg:col-span-4 relative min-h-[400px] h-[400px] lg:h-full border border-brand-black/10 overflow-hidden bg-brand-black group">
           <div className="absolute inset-0 grayscale contrast-[1.1] opacity-80 group-hover:grayscale-[30%] transition-all duration-[1s]">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d106376.56000570778!2d-7.6601446!3d33.572404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d284f3c7e7cb%3A0x2dbcd9d7d962a98c!2sCasablanca%2C%20Morocco!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+              src={`https://maps.google.com/maps?q=${coordinates}&z=15&output=embed`}
               width="100%" 
               height="100%" 
               style={{ border: 0, pointerEvents: 'auto' }} 
@@ -118,7 +130,7 @@ export function ContactClient({ data, globalSettings }: { data: any, globalSetti
           </div>
           <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm px-4 py-3 pointer-events-none flex justify-between items-center z-10 border border-brand-black/10">
              <p className="text-xs uppercase tracking-widest font-semibold text-brand-black">{coordinates}</p>
-             <a href="https://maps.google.com/?q=Casablanca" target="_blank" rel="noreferrer" className="text-xs uppercase tracking-widest font-bold text-brand-black border-b border-brand-black hover:border-transparent pb-0.5 transition-colors pointer-events-auto inline-flex items-center gap-2">
+             <a href="https://goo.gl/maps/MZaw55x4PGTQQet49" target="_blank" rel="noreferrer" className="text-xs uppercase tracking-widest font-bold text-brand-black border-b border-brand-black hover:border-transparent pb-0.5 transition-colors pointer-events-auto inline-flex items-center gap-2">
                Ouvrir dans Maps <ArrowRight className="w-3 h-3" />
              </a>
           </div>

@@ -35,6 +35,11 @@ export const contactInfo = defineType({
       type: 'url',
     }),
     defineField({
+      name: 'facebook',
+      title: 'Lien Facebook',
+      type: 'url',
+    }),
+    defineField({
       name: 'linkedin',
       title: 'Lien LinkedIn',
       type: 'url',

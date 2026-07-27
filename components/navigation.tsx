@@ -49,7 +49,7 @@ export function Navigation({ settings }: { settings?: any }) {
                      src={settings.logo.asset.url} 
                      alt="Logo" 
                      fill 
-                     className={`object-contain object-center transition-all duration-[1s] ease-[0.16,1,0.3,1] ${isDarkBg && !menuOpen ? 'brightness-0 invert opacity-90' : 'opacity-100'}`}
+                     className="object-contain object-center transition-all duration-[1s] ease-[0.16,1,0.3,1] opacity-100"
                      priority
                    />
                 </div>
@@ -118,7 +118,7 @@ export function Navigation({ settings }: { settings?: any }) {
             </nav>
             <div className="absolute bottom-12 flex gap-8 text-xs uppercase tracking-widest text-brand-gray">
               <a href={settings?.contact?.instagram || "https://instagram.com"} target="_blank" rel="noreferrer">Instagram</a>
-              <a href={`mailto:${settings?.contact?.email || "contact@lkarchigroupe.com"}`}>Email</a>
+              <a href={`mailto:${settings?.contact?.email || "lkarchigroupe@gmail.com"}`}>Email</a>
             </div>
           </motion.div>
         )}

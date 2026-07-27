@@ -100,12 +100,13 @@ async function seed() {
     siteTitle: 'LK Archi Groupe',
     footerCatchphrase: "L'espace est le souffle de l'architecture.",
     contact: {
-      address: "24 Blvd d'Anfa, Quartier Racine, Casablanca, Maroc",
-      mapCoordinates: "33.572404, -7.6601446",
-      email: "contact@lkarchigroupe.com",
-      phone: "+212 600 000 000",
-      instagram: "https://instagram.com",
-      linkedin: "https://linkedin.com/company/lkarchigroupe"
+      address: "L&K Architecture est une agence d'architecture, d'urbanisme et de design basée à Salé",
+      mapCoordinates: "34.075416, -6.7879382",
+      email: "lkarchigroupe@gmail.com",
+      phone: "+212 636 866 105",
+      instagram: "https://instagram.com/lkarchigroupe",
+      facebook: "https://www.facebook.com/lkarchigroupe",
+      linkedin: "https://linkedin.com/lkarchigroupe"
     },
     seo: {
       metaTitle: "LK Archi Studio | Espace, Lumière, Matière, Précision",

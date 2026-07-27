@@ -2,14 +2,15 @@ import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
 
 export function Footer({ settings }: { settings?: any }) {
-  const email = settings?.contact?.email || 'contact@lkarchigroupe.com';
-  const phone = settings?.contact?.phone || '+212 600 000 000';
+  const email = settings?.contact?.email || 'lkarchigroupe@gmail.com';
+  const phone = settings?.contact?.phone || '+212 636 866 105';
   const waDigits = phone.replace(/[^0-9]/g, '');
-  const instagram = settings?.contact?.instagram || 'https://instagram.com';
-  const linkedin = settings?.contact?.linkedin || 'https://linkedin.com';
+  const instagram = settings?.contact?.instagram || 'https://instagram.com/lkarchigroupe';
+  const facebook = settings?.contact?.facebook || 'https://www.facebook.com/lkarchigroupe';
+  const linkedin = settings?.contact?.linkedin || 'https://linkedin.com/lkarchigroupe';
   const location =
     settings?.contact?.address?.split(',').slice(-2).join(',').trim() ||
-    'Casablanca, Morocco';
+    'Salé, Maroc';
 
   return (
     <footer className="h-full w-full bg-[#050505] text-white px-5 md:px-10 lg:px-14 flex flex-col">
@@ -65,6 +66,15 @@ export function Footer({ settings }: { settings?: any }) {
                   <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
                 </a>
                 <a
+                  href={facebook}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex items-center gap-2 text-xs md:text-sm uppercase tracking-[0.18em] text-white/75 hover:text-white transition-colors group"
+                >
+                  Facebook
+                  <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all" />
+                </a>
+                <a
                   href={linkedin}
                   target="_blank"
                   rel="noreferrer"
@@ -99,8 +109,10 @@ export function Footer({ settings }: { settings?: any }) {
                 Confidentialité
               </Link>
             </div>
-            <span>
+            <span className="flex items-center gap-1.5">
               &copy; {new Date().getFullYear()} LK Archi Groupe
+              <span className="text-white/20">|</span>
+              <a href="https://studio.obeaj.me" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">By Obeaj Studio</a>
             </span>
           </div>
         </div>
